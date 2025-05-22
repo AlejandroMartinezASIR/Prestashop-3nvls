@@ -19,9 +19,9 @@ sudo apt install php8.1 php8.1-cli php8.1-mysql php8.1-xml php8.1-curl php8.1-in
 
 # Creación de la base de datos y usuario de MySQL
 mysql -u root <<EOF
-CREATE DATABASE prestashop CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-CREATE USER IF NOT EXISTS 'psuser'@'%' IDENTIFIED BY 'pspass';
-GRANT ALL PRIVILEGES ON prestashop.* TO 'psuser'@'%';
+CREATE DATABASE $PRESTASHOP_DB_NAME CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+CREATE USER IF NOT EXISTS '$PRESTASHOP_DB_USER'@'%' IDENTIFIED BY '$PRESTASHOP_DB_PASS';
+GRANT ALL PRIVILEGES ON $PRESTASHOP_DB_NAME.* TO '$PRESTASHOP_DB_USER'@'%';
 FLUSH PRIVILEGES;
 EOF
 
