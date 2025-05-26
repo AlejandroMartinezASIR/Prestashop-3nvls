@@ -30,8 +30,8 @@ sudo a2ensite 000-default.conf
 
 # Configuramos parametros de frontends
 sudo sed -i 's/^memory_limit = .*/memory_limit = 512M/' "$PHP_INI"
-sudo sed -i 's/^upload_max_filesize = .*/upload_max_filesize = 64M/' "$PHP_INI"
-sudo sed -i 's/^post_max_size = .*/post_max_size = 64M/' "$PHP_INI"
+sudo sed -i 's/^upload_max_filesize = .*/upload_max_filesize = 300M/' "$PHP_INI"
+sudo sed -i 's/^post_max_size = .*/post_max_size = 300M/' "$PHP_INI"
 sudo sed -i 's/^max_execution_time = .*/max_execution_time = 300/' "$PHP_INI"
 sudo sed -i 's/^max_input_time = .*/max_input_time = 300/' "$PHP_INI"
 
