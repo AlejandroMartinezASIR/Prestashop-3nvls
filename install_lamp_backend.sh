@@ -1,6 +1,7 @@
 #!/bin/bash
 
-#!/bin/bash
+#Importamos las variables de entorno
+source .env
 
 # Configuramos para mostrar los comandos y finalizar si hay error
 set -ex
