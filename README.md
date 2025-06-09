@@ -1,5 +1,21 @@
-# Prestashop a 3 niveles
+# PRESTASHOP A 3 NIVELES
 Este repositorio sirve para la creación de un prestashop a 3 niveles (BACK END - FRONT END - LOAD BALANCER), solo deberas de ejecutar los scripts y seguir los pasos que estan a continuación.
+```
+├── README.md
+├── conf
+│   ├── load-balancer.conf
+│   ├── 000-default.conf
+│   └── .htaccess
+└── scripts
+    ├── .env
+    ├── setup_load_balancer.sh
+    ├── install_lamp_frontend.sh
+    ├── install_lamp_backend.sh
+    ├── setup_letsencrypt_https.sh
+    ├── deploy_prestashop.sh
+    ├── install_nfs_client.sh
+    └── install_nfs_server.sh
+```
 ## VARIABLES
 Para comenzar deberemos de rellenar las variables del fichero **.env-example** y renombrabrlo a **.env**.
 ````bash
@@ -100,6 +116,6 @@ Una vez registrado ejecutaremos el script que nos falta:
 sudo ./setup_letsencrypt_certificate.sh
 ```
 ---
-
+# INSTALACIÓN DE PRESTASHOP
 
 
