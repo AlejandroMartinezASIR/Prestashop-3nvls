@@ -117,5 +117,65 @@ sudo ./setup_letsencrypt_certificate.sh
 ```
 ---
 # INSTALACIÓN DE PRESTASHOP
+Tras haber finalizado la instalación de todas las dependencias de los servidores y descargado el instalador de Prestashop 8.2.1, nos dirigimos a nuestro navegador y ponemos el **nombre de nuestro dominio**, dicho dominio registrado anteriormente en [NO-IP](https://my.noip.com/) en el apartado nombre de host, lo puedes mirar en la anterior imagen.
 
+Una vez tras introducirnos en el dominio nos aparecera una pantalla de carga de prestashop la cual estaria instalando el instalador, cuando esta acabe nos saldra el **asistente de instalación** el cual personalizaremos.
+
+## 1
+Para comenzar la personalización nos pedira el idioma de instalación, en nuestro caso el Español.
+
+![no-ip](images/1.png)
+
+## 2
+Después de elegir el idioma deberemos de aceptar los términos y condiciones, ya que si no lo hacemos no nos dejara continuar con la página.
+
+![no-ip](images/2.png)
+
+## 3
+En este paso elegiremos el **nombre** de nuestra tienda, **país**, **Activar SSL o no** y nuestra cuenta de **back office** para administrar la tienda.
+
+![no-ip](images/3.png)
+
+En nuestro caso:
+
+**Información de su tienda**
+-       Nombre de la tienda: God Of The Desert
+-        País: España
+-       Activar SSL: Sí (ya que tenemos el certificado originado por certbot)
+
+**Tu cuenta**
+-       Nombre: (Nombre del usuario)
+-       Apellidos: (Apellidos del usuario)
+-       Correo: (Correo del usuario)
+-       Contraseña: (Contraseña del usuario)
+
+
+![no-ip](images/4.png)
+
+## 4
+Una vez terminado el paso anterior nos daran a elegir si queremos productos de demostración el cual nosotros diremos que sí
+
+![no-ip](images/5.png)
+
+## 5
+Este paso es muy importante ya que deberemos de conectar la página web a nuestra base de datos a través de su IP privada, nombre de base de datos, usuario y su contraseña:
+![no-ip](images/6.png)
+-       Dirección del sevidor de la base de datos: 172.31.29.224
+-       Nombre de la base de datos: (PRESTASHOP_DB_NAME en el .env)
+-       Usuario de la base de datos: (PRESTASHOP_DB_USER en el .env)
+-       Contraseña de la base de datos: (PRESTASHOP_DB_PASSWORD en el .env)
+-       Prefijo de las tablas: (por defecto ps_)
+-        Eliminar tablas existentes: Sí
+
+## 6 
+Una vez nos salga esta pantalla tras haber finalizado el asistente instalación
+![no-ip](images/7.png)
+
+Deberemos de borrar la carpeta install de los archivos.
+```bash
+sudo rm -rf /var/www/html/install
+```
+Tras borrar la carpeta install, nos introducimos en el back office y ponemos nuestra tienda visible y ya tendriamos nuestra página en funcionamiento utilizando nuestros 5 servidores.
+
+![no-ip](images/8.png)
 
