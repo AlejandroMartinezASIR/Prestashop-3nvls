@@ -169,7 +169,7 @@ Este paso es muy importante ya que deberemos de conectar la página web a nuestr
 
 ## 6 
 Una vez nos salga esta pantalla tras haber finalizado el asistente instalación
-![no-ip](images/7.png)
+![no-ip](images/7.PNG)
 
 Deberemos de borrar la carpeta install de los archivos.
 ```bash
@@ -177,5 +177,5 @@ sudo rm -rf /var/www/html/install
 ```
 Tras borrar la carpeta install, nos introducimos en el back office y ponemos nuestra tienda visible y ya tendriamos nuestra página en funcionamiento utilizando nuestros 5 servidores.
 
-![no-ip](images/8.png)
+![no-ip](images/8.PNG)
 
